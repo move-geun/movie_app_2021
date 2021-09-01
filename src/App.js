@@ -1,11 +1,4 @@
-function Food({ name, image }) {
-  return (
-    <div>
-      <h2> I like {name}</h2>
-      <img src={image} alt={name} />
-    </div>
-  );
-}
+import PropTypes from "prop-types";
 
 const likeFood = [
   {
@@ -19,14 +12,36 @@ const likeFood = [
     name: "돈가스",
     image:
       "https://3.bp.blogspot.com/-hKwIBxIVcQw/WfsewX3fhJI/AAAAAAAAALk/yHxnxFXcfx4ZKSfHS_RQNKjw3bAC03AnACLcBGAs/s400/DSC07624.jpg",
+    rating: 3,
   },
 ];
+
+Food.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  rating: PropTypes.number,
+};
+
+function Food({ name, image, rating }) {
+  return (
+    <div>
+      <h2> I like {name}</h2>
+      <h4> {rating} / 5.0 </h4>
+      <img src={image} alt={name} />
+    </div>
+  );
+}
 
 function App() {
   return (
     <div>
       {likeFood.map((dish) => (
-        <Food key={dish.id} name={dish.name} image={dish.image} />
+        <Food
+          key={dish.id}
+          name={dish.name}
+          image={dish.image}
+          rating={dish.rating}
+        />
       ))}
     </div>
   );
