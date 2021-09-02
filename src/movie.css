@@ -1,0 +1,24 @@
+.movie {
+  display: flex;
+  width: 45%;
+  justify-content: space-between;
+  margin: 25px;
+  position: relative;
+  background-color: #ffffff;
+  height: 300px;
+  min-width: 510px;
+}
+
+.movie__poster {
+  max-width: 200px;
+  max-height: 345px;
+  display: inline;
+}
+
+.movie__data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: left;
+  flex-wrap: no-wrap;
+}
