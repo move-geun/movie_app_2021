@@ -28,6 +28,8 @@
   left: 230px;
   top: 30px;
   box-sizing: border-box;
+  text-decoration: none;
+  color: black;
 }
 
 .movie__year {
@@ -58,7 +60,7 @@
 
 .movie__summary {
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 600;
   opacity: 0.7;
 }

@@ -1,0 +1,33 @@
+body {
+  height: 100vh;
+}
+
+@keyframes credit {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.headContainer {
+  width: 700px;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
+    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+}
+
+.headContainer span {
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  animation: credit 5s ease-in-out forwards;
+}
